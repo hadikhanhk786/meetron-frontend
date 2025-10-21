@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/meetron-frontend/static/css/main.3ce16e10.css",
-    "main.js": "/meetron-frontend/static/js/main.8e0a5168.js",
+    "main.css": "/meetron-frontend/static/css/main.1397ba21.css",
+    "main.js": "/meetron-frontend/static/js/main.429254cb.js",
     "static/js/259.418d3904.chunk.js": "/meetron-frontend/static/js/259.418d3904.chunk.js",
     "static/js/453.dc87adba.chunk.js": "/meetron-frontend/static/js/453.dc87adba.chunk.js",
     "index.html": "/meetron-frontend/index.html",
-    "main.3ce16e10.css.map": "/meetron-frontend/static/css/main.3ce16e10.css.map",
-    "main.8e0a5168.js.map": "/meetron-frontend/static/js/main.8e0a5168.js.map",
+    "main.1397ba21.css.map": "/meetron-frontend/static/css/main.1397ba21.css.map",
+    "main.429254cb.js.map": "/meetron-frontend/static/js/main.429254cb.js.map",
     "259.418d3904.chunk.js.map": "/meetron-frontend/static/js/259.418d3904.chunk.js.map",
     "453.dc87adba.chunk.js.map": "/meetron-frontend/static/js/453.dc87adba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ce16e10.css",
-    "static/js/main.8e0a5168.js"
+    "static/css/main.1397ba21.css",
+    "static/js/main.429254cb.js"
   ]
 }
