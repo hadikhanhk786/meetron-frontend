@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/meetron-frontend/static/css/main.9095cb37.css",
+    "main.js": "/meetron-frontend/static/js/main.81e5949e.js",
+    "static/js/453.dc87adba.chunk.js": "/meetron-frontend/static/js/453.dc87adba.chunk.js",
+    "index.html": "/meetron-frontend/index.html",
+    "main.9095cb37.css.map": "/meetron-frontend/static/css/main.9095cb37.css.map",
+    "main.81e5949e.js.map": "/meetron-frontend/static/js/main.81e5949e.js.map",
+    "453.dc87adba.chunk.js.map": "/meetron-frontend/static/js/453.dc87adba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9095cb37.css",
+    "static/js/main.81e5949e.js"
+  ]
+}
