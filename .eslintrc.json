@@ -1,0 +1,12 @@
+{
+  "extends": ["react-app"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "globals": {
+    "RTCRtpScriptTransform": "readonly",
+    "RTCRtpSender": "readonly",
+    "RTCRtpReceiver": "readonly"
+  }
+}
