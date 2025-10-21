@@ -3,6 +3,7 @@ import VideoCall from "./components/VideoCall";
 
 function App() {
   const [roomId, setRoomId] = useState("");
+  const [userName, setUserName] = useState("");
   const [joined, setJoined] = useState(false);
   const [showCopied, setShowCopied] = useState(false);
 
@@ -20,7 +21,7 @@ function App() {
   };
 
   const handleJoinRoom = () => {
-    if (roomId.trim()) {
+    if (roomId.trim() && userName.trim()) {
       setJoined(true);
       // Update URL without reload
       const newUrl = `${window.location.pathname}?room=${roomId}`;
@@ -29,12 +30,14 @@ function App() {
   };
 
   const handleCreateRoom = () => {
-    const newRoomId = generateRoomId();
-    setRoomId(newRoomId);
-    setJoined(true);
-    // Update URL with room ID
-    const newUrl = `${window.location.pathname}?room=${newRoomId}`;
-    window.history.pushState({}, '', newUrl);
+    if (userName.trim()) {
+      const newRoomId = generateRoomId();
+      setRoomId(newRoomId);
+      setJoined(true);
+      // Update URL with room ID
+      const newUrl = `${window.location.pathname}?room=${newRoomId}`;
+      window.history.pushState({}, '', newUrl);
+    }
   };
 
   const handleLeaveRoom = () => {
@@ -74,7 +77,7 @@ function App() {
   if (joined) {
     return (
       <>
-        <VideoCall roomId={roomId} onLeave={handleLeaveRoom} onShare={shareRoom} />
+        <VideoCall roomId={roomId} userName={userName} onLeave={handleLeaveRoom} onShare={shareRoom} />
         
         {/* Floating Share Button */}
         <div className="fixed top-4 right-4 z-50">
@@ -123,6 +126,28 @@ function App() {
             </div>
 
             <div className="space-y-4">
+              {/* Username Input */}
+              <div>
+                <label className="block text-white/80 text-sm font-medium mb-2">
+                  Your Name <span className="text-red-400">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value.slice(0, 20))}
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent backdrop-blur-sm"
+                  maxLength={20}
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter' && userName.trim() && roomId.trim()) {
+                      handleJoinRoom();
+                    }
+                  }}
+                />
+                <p className="text-white/40 text-xs mt-1">{userName.length}/20 characters</p>
+              </div>
+
+              {/* Room Code Input */}
               <div>
                 <label className="block text-white/80 text-sm font-medium mb-2">Room Code</label>
                 <div className="relative">
@@ -134,7 +159,7 @@ function App() {
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent backdrop-blur-sm pr-12"
                     maxLength={8}
                     onKeyPress={(e) => {
-                      if (e.key === 'Enter' && roomId.trim()) {
+                      if (e.key === 'Enter' && userName.trim() && roomId.trim()) {
                         handleJoinRoom();
                       }
                     }}
@@ -163,7 +188,7 @@ function App() {
 
               <button
                 onClick={handleJoinRoom}
-                disabled={!roomId.trim()}
+                disabled={!roomId.trim() || !userName.trim()}
                 className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg"
               >
                 Join Room
@@ -180,7 +205,8 @@ function App() {
 
               <button
                 onClick={handleCreateRoom}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm flex items-center justify-center gap-2"
+                disabled={!userName.trim()}
+                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -189,7 +215,7 @@ function App() {
               </button>
 
               {/* Quick Share Options */}
-              {roomId && !joined && (
+              {roomId && !joined && userName.trim() && (
                 <div className="pt-4 border-t border-white/20">
                   <p className="text-white/60 text-xs text-center mb-3">Share this room:</p>
                   <div className="flex gap-2">
