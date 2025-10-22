@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/meetron-frontend/static/css/main.fa1d23aa.css",
-    "main.js": "/meetron-frontend/static/js/main.5f896743.js",
-    "static/js/259.418d3904.chunk.js": "/meetron-frontend/static/js/259.418d3904.chunk.js",
-    "static/js/22.8eeb3d4e.chunk.js": "/meetron-frontend/static/js/22.8eeb3d4e.chunk.js",
+    "main.css": "/meetron-frontend/static/css/main.69047eb0.css",
+    "main.js": "/meetron-frontend/static/js/main.7463ca1d.js",
+    "static/js/259.a83b89f1.chunk.js": "/meetron-frontend/static/js/259.a83b89f1.chunk.js",
+    "static/js/85.fdb47c57.chunk.js": "/meetron-frontend/static/js/85.fdb47c57.chunk.js",
     "static/js/496.a51c264f.chunk.js": "/meetron-frontend/static/js/496.a51c264f.chunk.js",
     "static/js/594.7122fbb1.chunk.js": "/meetron-frontend/static/js/594.7122fbb1.chunk.js",
     "static/js/453.dc87adba.chunk.js": "/meetron-frontend/static/js/453.dc87adba.chunk.js",
     "index.html": "/meetron-frontend/index.html",
-    "main.fa1d23aa.css.map": "/meetron-frontend/static/css/main.fa1d23aa.css.map",
-    "main.5f896743.js.map": "/meetron-frontend/static/js/main.5f896743.js.map",
-    "259.418d3904.chunk.js.map": "/meetron-frontend/static/js/259.418d3904.chunk.js.map",
-    "22.8eeb3d4e.chunk.js.map": "/meetron-frontend/static/js/22.8eeb3d4e.chunk.js.map",
+    "main.69047eb0.css.map": "/meetron-frontend/static/css/main.69047eb0.css.map",
+    "main.7463ca1d.js.map": "/meetron-frontend/static/js/main.7463ca1d.js.map",
+    "259.a83b89f1.chunk.js.map": "/meetron-frontend/static/js/259.a83b89f1.chunk.js.map",
+    "85.fdb47c57.chunk.js.map": "/meetron-frontend/static/js/85.fdb47c57.chunk.js.map",
     "496.a51c264f.chunk.js.map": "/meetron-frontend/static/js/496.a51c264f.chunk.js.map",
     "594.7122fbb1.chunk.js.map": "/meetron-frontend/static/js/594.7122fbb1.chunk.js.map",
     "453.dc87adba.chunk.js.map": "/meetron-frontend/static/js/453.dc87adba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa1d23aa.css",
-    "static/js/main.5f896743.js"
+    "static/css/main.69047eb0.css",
+    "static/js/main.7463ca1d.js"
   ]
 }
